@@ -1,0 +1,9 @@
+python
+machine learning
+data analysis
+sql
+flask
+web scraping
+internship
+model building
+deployment

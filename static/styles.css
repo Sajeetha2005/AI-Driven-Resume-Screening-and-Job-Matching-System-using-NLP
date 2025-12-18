@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e5e7eb;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 6px;
+    background: linear-gradient(90deg, #38bdf8, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    background: #020617;
+    color: #e5e7eb;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: linear-gradient(90deg, #38bdf8, #a78bfa);
+    color: #020617;
+}
+
+.section {
+    margin-top: 35px;
+}
+
+.section h3 {
+    margin-bottom: 18px;
+}
+
+.matched h3 {
+    color: #22c55e;
+}
+
+.missing h3 {
+    color: #ef4444;
+}
+
+.card {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.card strong {
+    font-size: 16px;
+}
+
+.card p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.skill-title {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.matched-skill {
+    color: #22c55e;
+}
+
+.missing-skill {
+    color: #ef4444;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.skill-list span {
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    background: #1e293b;
+}
+
+.skill-list.green span {
+    border-left: 4px solid #22c55e;
+}
+
+.skill-list.red span {
+    border-left: 4px solid #ef4444;
+}
+
+.back-link {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    color: #38bdf8;
+    font-weight: 600;
+    text-decoration: none;
+}

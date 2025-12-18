@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Screening Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Resume Screening Results</h1>
+    <p class="subtitle">
+        Job Role: {{ job_role }} | Threshold: {{ threshold }}%
+    </p>
+
+    <!-- SELECTED -->
+    <div class="section matched">
+        <h3>✅ Selected Resumes</h3>
+
+        {% if selected %}
+            {% for r in selected %}
+            <div class="card">
+                <strong>{{ r.name }}</strong>
+                <p><b>Match Score:</b> {{ r.score }}%</p>
+
+                <p class="skill-title matched-skill">Matched Skills</p>
+                <div class="skill-list green">
+                    {% for s in r.matched_skills %}
+                        <span>{{ s }}</span>
+                    {% endfor %}
+                </div>
+
+                <p class="skill-title missing-skill">Missing Skills</p>
+                <div class="skill-list red">
+                    {% for s in r.missing_skills %}
+                        <span>{{ s }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>No resumes selected.</p>
+        {% endif %}
+    </div>
+
+    <!-- NOT SELECTED -->
+    <div class="section missing">
+        <h3>❌ Not Selected Resumes</h3>
+
+        {% if not_selected %}
+            {% for r in not_selected %}
+            <div class="card">
+                <strong>{{ r.name }}</strong>
+                <p><b>Match Score:</b> {{ r.score }}%</p>
+
+                <p class="skill-title matched-skill">Matched Skills</p>
+                <div class="skill-list green">
+                    {% for s in r.matched_skills %}
+                        <span>{{ s }}</span>
+                    {% endfor %}
+                </div>
+
+                <p class="skill-title missing-skill">Missing Skills</p>
+                <div class="skill-list red">
+                    {% for s in r.missing_skills %}
+                        <span>{{ s }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>All resumes are selected 🎉</p>
+        {% endif %}
+    </div>
+
+    <a href="/" class="back-link">Check Again</a>
+</div>
+
+</body>
+</html>

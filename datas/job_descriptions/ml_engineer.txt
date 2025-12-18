@@ -1,0 +1,2 @@
+Technical -- SEO Basics, Python (NumPy, Matplotlib, Pandas), SQL.
+Data Analysis -- Data Cleaning and Preprocessing, Exploratory Data Analysis (EDA), Statistical Analysis.

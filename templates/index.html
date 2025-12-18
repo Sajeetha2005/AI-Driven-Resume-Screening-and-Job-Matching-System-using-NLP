@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Screening System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>AI Resume Screening System</h1>
+    <p class="subtitle">
+        Bulk resume screening using Machine Learning & NLP
+    </p>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label>Upload Resumes (PDF)</label>
+            <input type="file" name="resumes" accept=".pdf" multiple required>
+        </div>
+
+        <div class="form-group">
+            <label>Select Job Role</label>
+            <select name="job_role" required>
+                {% for role in job_roles %}
+                <option value="{{ role }}">
+                    {{ role.replace("_", " ").title() }}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Job Description (Provided by Company)</label>
+            <textarea
+                name="job_description"
+                rows="7"
+                placeholder="Paste the job description here..."
+                required></textarea>
+        </div>
+
+        <button type="submit">Screen Resumes</button>
+    </form>
+</div>
+
+</body>
+</html>
